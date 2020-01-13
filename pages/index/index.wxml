@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <text>{{userInfo.name}}</text>
+  <button bindtap="login">点击</button>
+</view>
