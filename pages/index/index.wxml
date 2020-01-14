@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <text>token:{{token.token?token.token:"空"}}</text>
+  <text>userinfo:{{userInfo?userInfo.name:"空"}}</text>
   <button bindtap="login">登录</button>
-  <text>用户信息:未获取</text>
-  <button>获取用户信息</button>
+  <button bindtap="fetchUserInfo">获取用户信息</button>
+  <button bindtap="logout">推出登录</button>
 </view>

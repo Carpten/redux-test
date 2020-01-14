@@ -3,12 +3,12 @@ import {
   connect
 } from '../../libs/wechat-weapp-redux.min';
 import {
-  login
+  login,
+  fetchUserInfo,
+  logout
 } from './index.reducer'
 
 const pageConfig = {
-  data: {
-  },
 }
 
 const mapStateToData = state => ({
@@ -17,6 +17,8 @@ const mapStateToData = state => ({
 
 const mapDispatchToPage = dispatch => ({
   login: () => dispatch(login),
+  fetchUserInfo: () => dispatch(fetchUserInfo),
+  logout: () => dispatch(logout),
 })
 
 const nextPageConfig = connect(mapStateToData, mapDispatchToPage)(pageConfig)

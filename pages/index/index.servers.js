@@ -9,6 +9,15 @@ export const requestLogin = () => new Promise((resolve, reject) => {
 //模拟获取内容
 export const requestUserInfo = () => new Promise((resolve, reject) => {
   setTimeout(() => {
+    resolve({
+      name: 'Trump'
+    })
+  }, 2000)
+})
+
+//模拟登出
+export const requestLogout = () => new Promise((resolve, reject) => {
+  setTimeout(() => {
     resolve()
   }, 2000)
 })
