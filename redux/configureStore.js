@@ -7,8 +7,8 @@ import {
 } from '../libs/redux.min'
 
 import {
-  indexReducer
-} from '../pages/login/index.reducer';
+  appReducer
+} from './reducers';
 import thunk from '../libs/redux-thunk';
 import {
   Provider
@@ -17,7 +17,7 @@ import {
 
 function configureStore() {
   return createStore(combineReducers({
-    indexReducer
+    appReducer
   }), compose(applyMiddleware(thunk))) // redux store
 }
 

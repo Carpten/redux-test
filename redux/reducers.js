@@ -2,7 +2,7 @@ import {
   requestLogin,
   requestUserInfo,
   requestLogout
-} from './index.servers'
+} from '../services'
 
 const LOGIN = 'LOGIN';
 const FETCH_USERINFO = 'FETCH_USERINFO';
@@ -39,11 +39,11 @@ export const logout = dispatch => {
 
 // 仓库数据结构预定义
 const initState = {
-  token:null,
+  token: null,
   userInfo: null
 };
 
-export const indexReducer = (state = initState, action) => {
+export const appReducer = (state = initState, action) => {
   switch (action.type) {
     case LOGIN:
       return Object.assign({}, state, {
