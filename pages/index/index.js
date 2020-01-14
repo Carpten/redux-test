@@ -4,14 +4,15 @@ import {
 } from '../../libs/wechat-weapp-redux.min';
 import {
   login
-} from '../../app.redux'
+} from './index.reducer'
 
 const pageConfig = {
-  data: {},
+  data: {
+  },
 }
 
 const mapStateToData = state => ({
-  ...state
+  ...state.indexReducer
 })
 
 const mapDispatchToPage = dispatch => ({

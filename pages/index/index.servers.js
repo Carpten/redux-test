@@ -1,7 +1,9 @@
 //模拟登录
 export const requestLogin = () => new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve()
+    resolve({
+      token: '我是获取的token'
+    })
   }, 2000)
 })
 //模拟获取内容

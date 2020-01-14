@@ -5,9 +5,6 @@ import {
   compose,
   combineReducers
 } from '../libs/redux.min'
-import {
-  appReducer
-} from '../app.redux';
 
 import {
   indexReducer
@@ -19,7 +16,9 @@ import {
 
 
 function configureStore() {
-  return createStore(combineReducers({ appReducer}), compose(applyMiddleware(thunk))) // redux store
+  return createStore(combineReducers({
+    indexReducer
+  }), compose(applyMiddleware(thunk))) // redux store
 }
 
 module.exports = configureStore;
