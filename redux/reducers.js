@@ -8,8 +8,8 @@ const LOGIN = 'LOGIN';
 const FETCH_USERINFO = 'FETCH_USERINFO';
 const LOGOUT = 'LOGOUT';
 
-export const login = dispatch => {
-  requestLogin().then(succ => {
+export const login = async dispatch => {
+  await requestLogin().then(succ => {
     dispatch({
       type: LOGIN,
       data: succ
@@ -26,8 +26,8 @@ export const fetchUserInfo = dispatch => {
   })
 }
 
-export const logout = dispatch => {
-  requestLogout().then(succ => {
+export const logout = async dispatch => {
+  await requestLogout().then(succ => {
     dispatch({
       type: LOGOUT,
       data: succ

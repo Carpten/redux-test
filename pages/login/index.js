@@ -3,20 +3,22 @@ import {
   connect
 } from '../../libs/wechat-weapp-redux.min';
 import {
-  login,
-  fetchUserInfo,
-  logout
+  login
 } from '../../redux/reducers'
 
-const pageConfig = {
-}
+const pageConfig = {}
 
 const mapStateToData = state => ({
-  ...state.appReducer
+  // ...state.appReducer
 })
 
 const mapDispatchToPage = dispatch => ({
-  login: () => dispatch(login),
+  login: async() => {
+    await dispatch(login);
+    wx.navigateTo({
+      url: '../../pages/detail/detail',
+    })
+  }
 })
 
 const nextPageConfig = connect(mapStateToData, mapDispatchToPage)(pageConfig)

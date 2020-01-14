@@ -2,7 +2,6 @@ import {
   connect
 } from '../../libs/wechat-weapp-redux.min';
 import {
-  login,
   fetchUserInfo,
   logout
 } from '../../redux/reducers'
@@ -15,9 +14,11 @@ const mapStateToData = state => ({
 })
 
 const mapDispatchToPage = dispatch => ({
-  login: () => dispatch(login),
   fetchUserInfo: () => dispatch(fetchUserInfo),
-  logout: () => dispatch(logout),
+  logout: async () => {
+    await dispatch(logout);
+    wx.navigateBack()
+  }
 })
 
 const nextPageConfig = connect(mapStateToData, mapDispatchToPage)(pageConfig)
