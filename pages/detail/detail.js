@@ -6,8 +6,7 @@ import {
   logout
 } from '../../redux/reducers'
 
-const pageConfig = {
-}
+const pageConfig = {}
 
 const mapStateToData = state => ({
   ...state.appReducer
@@ -15,9 +14,9 @@ const mapStateToData = state => ({
 
 const mapDispatchToPage = dispatch => ({
   fetchUserInfo: () => dispatch(fetchUserInfo),
-  logout: async () => {
-    await dispatch(logout);
-    wx.navigateBack()
+  logout: async() => {
+      await dispatch(logout);
+      wx.navigateBack()
   }
 })
 
