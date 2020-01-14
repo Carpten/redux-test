@@ -1,9 +1,5 @@
-//app.js
-import { createStore } from './libs/redux.min'
-import { appReducer } from './app.redux.js';
-import { Provider } from './libs/wechat-weapp-redux.min.js';
-
-const store = createStore(appReducer) // redux store
+import configureStore from './redux/configureStore';
+const store = configureStore();
 
 App({
   store,

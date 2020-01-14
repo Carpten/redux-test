@@ -1,9 +1,9 @@
-import { requestLogin} from '/servers.js'
+import { requestLogin } from './index.servers'
 
 const LOGIN = 'LOGIN';
 
 export const login = dispatch => {
-  requestLogin().then(succ=>{
+  requestLogin().then(succ => {
     dispatch({
       type: LOGIN,
       data: {
@@ -18,7 +18,7 @@ const initState = {
   userInfo: null
 };
 
-export const appReducer = (state = initState, action) => {
+export const indexReducer = (state = initState, action) => {
   switch (action.type) {
     case LOGIN:
       return Object.assign({}, state, {

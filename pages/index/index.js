@@ -7,12 +7,7 @@ import {
 } from '../../app.redux'
 
 const pageConfig = {
-  data: {
-  },
-
-  login() {
-    this.login()
-  },
+  data: {},
 }
 
 const mapStateToData = state => ({
@@ -20,7 +15,7 @@ const mapStateToData = state => ({
 })
 
 const mapDispatchToPage = dispatch => ({
-  login: () => dispatch(login()),
+  login: () => dispatch(login),
 })
 
 const nextPageConfig = connect(mapStateToData, mapDispatchToPage)(pageConfig)

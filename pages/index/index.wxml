@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <text>{{userInfo.name}}</text>
-  <button bindtap="login">点击</button>
+  <text>登录状态:未登录</text>
+  <button bindtap="login">登录</button>
+  <text>用户信息:未获取</text>
+  <button>获取用户信息</button>
 </view>
