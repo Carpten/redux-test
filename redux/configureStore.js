@@ -8,7 +8,7 @@ import {
 
 import {
   indexReducer
-} from '../pages/index/index.reducer';
+} from '../pages/login/index.reducer';
 import thunk from '../libs/redux-thunk';
 import {
   Provider
